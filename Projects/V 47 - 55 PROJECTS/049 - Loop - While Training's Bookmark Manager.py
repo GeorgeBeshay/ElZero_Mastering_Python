@@ -1,0 +1,35 @@
+# ----------------------------
+# -- Loop => While Training --
+# -- Simple Bookmark Manage --
+# ----------------------------
+
+# Empty List To Fill Later 
+myFavouriteWebs = []
+
+# Maximum Allowed Websites 
+maximumWebs = 5 
+
+while maximumWebs > 0 :
+    # Input The New Website
+    web = input("Please Enter The Website Name Without 'https://' :").strip().lower()
+    # Add The New Website To The List
+    myFavouriteWebs.append(f"https://{web}")
+    # Subtract 1 From The Allowed Websites 
+    maximumWebs -= 1
+    # Print The Add Message
+    print(f"Website Added, {maximumWebs} Places are Left.")
+    # Print The List
+    print(myFavouriteWebs)
+else:
+    print("Bookmark Is Full, You Can't Add More.")
+
+# Check If List Is Not Empty 
+if len(myFavouriteWebs) > 0:
+    # Sort The List
+    myFavouriteWebs.sort()
+    index = 0 
+    print("Printing The List Of Websites In Your Bookmark.")
+    while index < len(myFavouriteWebs):
+        print(myFavouriteWebs[index])
+        print("*"*50)
+        index += 1
