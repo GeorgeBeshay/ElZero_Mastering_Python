@@ -3,16 +3,25 @@
 friends = ["Osama","Ahmed","Sayed","Ali","Mahmoud"]
 
 print(friends[0])
-print(friends[-5])
+print(friends[-len(friends)])
 print(friends[-1])
-print(friends[4])
+print(friends[len(friends)-1])
 
 # A2
 print(friends[0] + " , " + friends[2] + " , " + friends[4] + "\n" + friends[1] + " , " + friends[3])
 
 # A3
-print(friends[1:4])
-print(friends[-2:])
+for i in range(1,4):
+    if(i != 3):
+        print('"' + friends[i] + '", ', end=' ')
+    else:
+        print('"' + friends[i] + '"')
+
+for i in range (-2,0):
+    if(i!=-1):
+        print('"' + friends[i] + '", ', end=' ')
+    else:
+        print('"' + friends[i] + '"')
 
 # A4
 friends[-2:] = ["Elzero","Elzero"]
